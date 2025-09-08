@@ -26,6 +26,9 @@
 
 # 지구다 AI R&D Result
 
+![지구다 아키텍쳐](https://github.com/user-attachments/assets/76e40ef0-7e48-44cf-915b-fa0350ed67e2)
+
+
 ## 1. causal_classification
 바로가기: [causal_classificaton](causal_classification/README.md)
 ## 프로젝트 구조

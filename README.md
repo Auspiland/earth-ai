@@ -30,7 +30,8 @@
 바로가기: [causal_classificaton](causal_classification/README.md)
 ## 프로젝트 구조
 ```
-Causal_classification/
+causal_classification/
+├── images/                # 이미지
 ├── cls_module.py          # 인과 관계 binary 분류 추론
 ├── dataset.py             # 정규식 기반 데이터 라벨링 및 문장 분리 후 (sentence,label) 형식으로 csv 파일 생성
 ├── train.py               # 학습 및 best model 저장, 성능평가 지표 저장
@@ -45,6 +46,7 @@ Causal_classification/
 ## 프로젝트 구조
 ```
 clause_split/
+├── images/                # 이미지
 ├── train.py               # 문장 분류기 학습
 ├── prediction.py          # 문장을 절 단위로 분리
 ├── decide_same.py         # 유사 절쌍 탐색 및 정밀 유사도 계산
@@ -55,11 +57,11 @@ clause_split/
 <br />
 
 ## 3. R-VGAE
-바로가기: [R-VGAE](rvge/README.md)
+바로가기: [r-vgae](rvgae/README.md)
 ## 프로젝트 구조
 ```
-RVGAE/
-├── data/                  # Input 데이터
+rvgae/
+├── images/                # 이미지
 ├── model.py               # R-VGAE 모델 정의
 ├── predict.py             # 링크 및 타입 예측 실행
 └── requirements.txt       # 환경 설정
@@ -70,8 +72,8 @@ RVGAE/
 바로가기: [topic_lda](topic_lda/README.md)
 ## 프로젝트 구조
 ```
-Topic_LDA/
-├── assets/                # 데이터
+topic_lda/
+├── images/                # 이미지
 ├── CustomTokenizer.py     # 명사 단위 토크나이저
 ├── lda_modeling.py        # 명사로만 이루어진 스크립트와 불용어 사전, 카운터 벡터를 전달받아 LDA 토픽 모델링 진행
 ├── main.py                # 전처리부터 LDA 토픽 모델링, 저장까지 관리

@@ -28,28 +28,18 @@
 
 <p align="center">
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 </p>
 <p align="center">
-<img src="./image-3.png" width="500"/> 
+<img src="images/image-3.png" width="500"/> 
 </p>
 
----
 ## 주요 기술 스택
 
-| Task               | Tool/Library                |
-|--------------------|-----------------------------|
-| Transformer 모델   | HuggingFace Transformers    |
-| 임베딩            |   `KF-DeBERTa`           |
-| Classifer         | custom `TaggingModel`   |
-| 토큰화            | `DebertaV2Tokenizer`, `Kiwi`  |
-| data 관리        | custom `ClauseDB`     |
-| Parameter 관리    | `dataclass` 및 `config` |
-| 유사도 계산       | `cosine_similarity`, `TF-TDF`, `KMean`  |
-| 빠른 탐색         | 차원 축소 선탐색 후 정밀탐색  |
-| 시각화/진행상황    | `tqdm`, `matplotlib`         |
-
----
+<p align="center">
+  <img src="images/image-0.png" width="400"/>
+  <img src="images/image-4.png" height="400" width="600"/>
+</p>
 
 ## 실행 방법
 1. 환경 설정
@@ -58,39 +48,40 @@
 - torch 2.5.1
 - transformers 4.49.0
 - tqdm 4.67.1
-- numpy 2.0.1
-- scikit-learn 1.6.1 
-- kiwipiepy 0.21.0
-- accelerate 1.7.0
 ```
+
 2. 의존성 설치
 ```
 pip install -r requirements.txt
 ```
-3. 절 분할 모델 학습
+
+3. 모델 학습
 ```
 python train.py --config configs/kf_deberta.yaml
 ```
-4. 절 단위 예측
+
+4. 절 분할 예측
 ```
 python prediction.py --input input_text.txt --output predicted_clauses.jsonl
 ```
+
 5. 유사 절쌍 탐색
 ```
 python decide_same.py --input predicted_clauses.jsonl --output similar_temp.npy
 ```
+
 6. 결과 검증
 ```
 python test.py --input similar_temp.npy
 ```
 
 ## 프로젝트 구조
-
 ```
 clause_split/
-├── train.py               # 문장 분류기 학습
-├── prediction.py          # 문장을 절 단위로 분리
-├── decide_same.py         # 유사 절쌍 탐색 및 정밀 유사도 계산
-├── test.py                # 전체 파이프라인 검증
-└── requirements.txt       # 환경 설정
+├── images/              # 이미지
+├── train.py             # 문장 분류기 학습
+├── prediction.py        # 문장을 절 단위로 분리
+├── decide_same.py       # 유사 절쌍 탐색 및 정밀 유사도 계산
+├── test.py              # 전체 파이프라인 검증
+└── requirements.txt     # 환경 설정
 ```
